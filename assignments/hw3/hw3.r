@@ -255,8 +255,8 @@ plot7 <- plot7 + geom_path(data = map_data("world", region = "."), aes(long,lat,
 # wonMedal <- your code here
 wonMedal = SO2012Ctry[SO2012Ctry$Total > 0, c("Total", "Country", "longitude", "latitude")]
 # Your ggplot commands here.
-NumOfMedal = sqrt(wonMedal$Total)/3
-plot7 <- plot7 + geom_point(data = wonMedal, aes(x = wonMedal$longitude, y = wonMedal$latitude, size = NumOfMedal), color = "gold")
+NumOfMedals = sqrt(wonMedal$Total)/3
+plot7 <- plot7 + geom_point(data = wonMedal, aes(x = wonMedal$longitude, y = wonMedal$latitude, size = NumOfMedals), color = "gold")
 ## Not needed
 #Q12. Remake the plot and fill ......
 
@@ -317,17 +317,18 @@ load("rainfallCO.rda")
 
 # Create a variable 
 # max.rain : a vector of length 5 with the maximum rainfall at each station
+max.rain <- sapply(rain,max)
 
 # Create a variable 
 # mean.rain : a vector of length 5 with the average rainfall at each station
-
+mean.rain <- sapply(rain,mean)
 
 # Create a variable 
 # sd.rain : a vector of length 5 with the standard deviation of the rainfall at each station
+sd.rain <- sapply(rain,sd)
 
 # Create a variable 
 # n1989.rain : a vector of length 5 with the number of measurements at each station in the year 1989 (use [day])
-
-
+n1989.rain = sapply(day, function(x) sum(ifelse(floor(x) == 1989, 1, 0)))
 
 
