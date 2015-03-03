@@ -1,3 +1,5 @@
-Name: Shuotong Wu
-SID: 24596399
-Github account: Shuotong Wu (spritewu@berkeley.edu)
+name = "yourName"
+SID = "yourSID"
+email = "email@berkeley.edu"
+github_name = "github_name"
+status = "enrolled/audit/concurrent"
