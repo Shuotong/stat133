@@ -1,9 +1,9 @@
 {
     "login": "Shuotong", 
     "url": "git@github.com:Shuotong/stat133.git", 
-    "name": "yourName", 
-    "email": "email@berkeley.edu", 
-    "github_name": "github_name", 
+    "name": "Shuotong Wu", 
+    "email": "spritewu@berkeley.edu", 
+    "github_name": "Shuotong", 
     "status": "enrolled", 
     "grades": {}
 }
