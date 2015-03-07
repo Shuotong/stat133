@@ -12,3 +12,4 @@ INFO:root:(2 points) R('all.equal(bmi, sol$bmi)')[0] is True
 INFO:root:(2 points) R('all.equal(family.men, sol$family.men)')[0] is True
 INFO:root:(2 points) R('all.equal(family.young, sol$family.young)')[0] is True
 INFO:root:(2 points) R('all.equal(family2, sol$family2)')[0] is True
+INFO:root:You got a 20 out of 20.
