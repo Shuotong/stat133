@@ -3,7 +3,7 @@
 
 ## In one R command, create a variable [[ x ]] which is a vector and has
 ## all the even numbers between 2 and 20, in increasing order.
-
+x <- c(1:10)*2
 
 ## In one R command, create a variable [[ y ]] which is a vector and has
 ## all the odd numbers between -1 and -19, in decreasing order

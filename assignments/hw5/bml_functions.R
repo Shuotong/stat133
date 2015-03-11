@@ -69,29 +69,18 @@ bml.step <- function(m){
 
 bml.sim <- function(r, c, p){
   m = bml.init(r, c, p)
-  image(t(apply(m,2,rev)), axes = FALSE, col = c("white", "red", "blue"))
+  #image(t(apply(m,2,rev)), axes = FALSE, col = c("white", "red", "blue"))
   for (i in 1:2000) {
+    print(i)
     n = bml.step(m)
     if (n[[2]] == TRUE) {
       m = n[[1]]
-      image(t(apply(m,2,rev)), axes = FALSE, col = c("white", "red", "blue"))
+      #image(t(apply(m,2,rev)), axes = FALSE, col = c("white", "red", "blue"))
     } else {
       image(t(apply(m,2,rev)), axes = FALSE, col = c("white", "red", "blue"))
-      return (list(i, TRUE))
+      return (list(i, TRUE,m))
     }
   }
-  return (list(i, FALSE))
-  #m = bml.init(r, c, p)
-  #image(t(apply(m,2,rev)), axes = FALSE, col = c("white", "red", "blue"))
-  #for (i in 1:2000) {
-  #  n = bml.step(m)
-  #  m = n[[1]]
-  #  if (n[[2]] == TRUE) {
-  #    image(t(apply(m,2,rev)), axes = FALSE, col = c("white", "red", "blue"))
-  #  } else {
-  #    image(t(apply(m,2,rev)), axes = FALSE, col = c("white", "red", "blue"))
-  #    return (list(i, TRUE, m))
-  #  }
-  #}  
-  #return (list(i, FALSE,m))
+  image(t(apply(m,2,rev)), axes = FALSE, col = c("white", "red", "blue"))
+  return (list(i, FALSE,m))
 }
