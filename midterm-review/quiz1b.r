@@ -1,15 +1,15 @@
 # Please load in the dataset family-quiz.rda. It will be
 # required to perform the following tasks. The dataset includes data for
 # a family.
-
+load("family-quiz.rda")
 
 # calculate the mean and median age in the family. Store these as the
 # variables <mean.age> and <med.age> respectively.
 
 # mean.age <- your code here
 # med.age <- your code here
-
-
+mean.age <- mean(family$age)
+med.age <-median(family$age)
 # For each person in the dataset, calculate the squared difference between its
 # height and the mean height of the family. Store this as the variable
 # <height.diffs>. Note that this should be a numeric vector with length equal to

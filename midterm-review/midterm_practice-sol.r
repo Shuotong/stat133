@@ -89,7 +89,7 @@ fit <- lm(bwt ~ gestation, data=infants)
 ## Do a scatterplot of birthweight (on y-axis) vs. gestation (on x-axis)
 ## Add to the plot the line estimated in fit (hint: find the coefficients)
 ## Plot the line in red and put your own x- and y-axis labels on the plot.
-plot(bwt ~ gestation, data=infants, xlab='gestation', ylab='bwt')
+plot(data = infants, bwt ~ gestation,  xlab='gestation', ylab='bwt')
 abline(a=fit$coef[1], b=fit$coef[2], col='red')
 
 ## Plot a histogram of the fathers' heights (varible dht in the data frame).
