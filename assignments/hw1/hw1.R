@@ -87,7 +87,8 @@ family.young = family[family$age < "40",]
 
 # Create a new data frame 
 # << family.30y68i >> : a data frame, subset of family, with only people *over* 30, *shorter* than 68 in
-family.30y68i = family[family$age > "30",]
+family.30y68i = family[family$age > "30", ]
+family.30y68i = family.30y68i[family.30y68i$height < "68",]
 
 # Formula for BMI : BMI = (weight in lbs) / (height in in)^2 * 703
 # Note: the dataframe has weight in lbs and height in in as required.
