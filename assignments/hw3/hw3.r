@@ -129,7 +129,7 @@ wr_1998 <- wr1500m$new_year[wr1500m$year == 1998]
 # Your ggplot command:
 plot3 <- ggplot(aes(x = wr1500m$new_year, y = wr1500m$times_sec), data = wr1500m)
 plot3 <- plot3 + geom_step() + xlim(c(min(wr1500m$new_year),2020))
-plot3 <- plot3 + geom_segment(aes(x = wr_1998, xend = 2014+9/12 , y = wr1500m$times_sec[wr1500m$year == 1998], yend = wr1500m$times_sec[wr1500m$year == 1998]))
+plot3 <- plot3 + geom_segment(aes(x = wr_1998, xend = 2015+9/12 , y = wr1500m$times_sec[wr1500m$year == 1998], yend = wr1500m$times_sec[wr1500m$year == 1998]))
 
 # Q4. There are two times where the record stood for several
 # years - in 1944 and 1998. Let's make it easier to see these
@@ -160,7 +160,7 @@ plot3 <- plot3 + annotate("text", x = wr_1998, y = wr1500m$times_sec[wr1500m$yea
 
 plot4 <- ggplot(aes(x = wr1500m$new_year, y = wr1500m$times_sec), data = wr1500m)
 plot4 <- plot4 + geom_step() + xlim(c(min(wr1500m$new_year),2020))
-plot4 <- plot4 + geom_segment(aes(x = wr_1998, xend = 2014+9/12 , y = wr1500m$times_sec[wr1500m$year == 1998], yend = wr1500m$times_sec[wr1500m$year == 1998]))
+plot4 <- plot4 + geom_segment(aes(x = wr_1998, xend = 2015+9/12 , y = wr1500m$times_sec[wr1500m$year == 1998], yend = wr1500m$times_sec[wr1500m$year == 1998]))
 plot4 <- plot4 + geom_vline(aes(xintercept = wr_1944), color = "green")
 plot4 <- plot4 + geom_vline(aes(xintercept = wr_1998), color = "green")
 plot4 <- plot4 + annotate("text", x = wr_1944, y = wr1500m$times_sec[wr1500m$year == 1944], label = wr1500m$athlete[wr1500m$year == 1944], col = "blue")
