@@ -148,7 +148,6 @@ abline(v = wr_1944, col = 'grey')
 abline(v = wr_1998, col = 'grey')
 text(wr_1944, wr1500m$times_sec[wr1500m$year == 1944], label = wr1500m$athlete[wr1500m$year == 1944], cex = 0.8, col = 'red')
 text(wr_1998, wr1500m$times_sec[wr1500m$year == 1998], label = wr1500m$athlete[wr1500m$year == 1998], cex = 0.8, col = 'red')
-
 # Q5. Now we are ready to add other contextual information.
 # Remake the plot as before but now adding axis labels and a title.
 # This is the FINAL version of the plot of world record times.
