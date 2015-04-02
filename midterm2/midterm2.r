@@ -152,7 +152,7 @@ sd.cache <- sapply(Cache500, sd, na.rm= T)
 
 #mean.long.cache <- <your code here>
 mean.long.cache <- sapply(Cache500, function (x){
-  if (length(Cache500[x]) >= 50) {mean(x, na.rm = T)} 
+  if (length(x) >= 50) {mean(x, na.rm = T)} 
   else {NA}
 })
 
