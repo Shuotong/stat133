@@ -5,5 +5,32 @@
     "email": "spritewu@berkeley.edu", 
     "github_name": "Shuotong", 
     "status": "enrolled", 
-    "grades": {}
+    "grades": {
+        "hw1": {
+            "note": "", 
+            "hash": "05f1365d13b4390800f4df720246ed96adcb584d", 
+            "earned": 20, 
+            "possible": 20, 
+            "penalty": 0, 
+            "parts": {
+                "hw1": {
+                    "possible": 20, 
+                    "earned": 20
+                }
+            }
+        }, 
+        "hw4": {
+            "note": "", 
+            "hash": "40e0a593befe71ae549228e0cb4cb29e9c1c77f3", 
+            "earned": 17, 
+            "possible": 20, 
+            "penalty": 0, 
+            "parts": {
+                "hw4": {
+                    "possible": 20, 
+                    "earned": 17
+                }
+            }
+        }
+    }
 }
