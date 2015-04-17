@@ -329,7 +329,7 @@ cols <- rainbow(6)
   
 plot(mds, type = 'n',  main = "Presidents", xlab = "", ylab = "")
 text(mds, labels = unique(speechesDF$initial), col = cols[presParty[names(presParty)]])
-legend(0.015, -0.005, legend = levels(speechesDF$party), fill = cols)
+legend(0.015, -0.0005, legend = levels(speechesDF$party), fill = cols)
 ### Use hierarchical clustering to produce a visualization of  the results.
 # Compare the two plots.
 hc = hclust(as.dist(presDist))
