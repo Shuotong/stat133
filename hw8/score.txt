@@ -1,0 +1,3 @@
+oneBoot: indexing error. data and fit are dataframes, not lists!  -2
+
+Score: 18/20
