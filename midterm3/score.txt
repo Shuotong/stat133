@@ -1,0 +1,19 @@
+Total: 20/20
+
+Function 1
+5/5
+But note that you return a character instead of an (arguably 
+more natural)  numeric
+some of the time. Eg
+> maxDigits("1z3p ! 28")
+[1] "8"
+
+Function 2
+5/5
+
+Function 3
+5/5
+
+Function 4
+5/5
+
