@@ -438,7 +438,7 @@ text4 <- substr(phrases,1,3)
 
 # [2 pts]
 # Create a vector [text5] that has all the elements in phrases that have a punctuation mark 
-text5 <- phrases[grep('[[:punct:]]', phrases)]
+text5 <- phrases[grep('[[:punct:]]', phrases)]  
 
 
 # [2 pts]
