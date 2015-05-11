@@ -18,6 +18,7 @@ grep("^(cat|at|t)$", cats)
 # Find the word cat or caat or caaat, etc.
 caats = c("cat", "caat.", "caats", "caaaat", "my cat")
 grep("\\<ca+t\\>", caats)
+grep("ca+t",caats)
 # the {1,} is equivalent to +
 grep("\\<ca{1,}t\\>", caats)
 
