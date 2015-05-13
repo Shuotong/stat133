@@ -203,7 +203,7 @@ abline(v = 2.1)
 # The left plot should include only data from 1960, the right one only from 2014.
 par(mfrow= c(1,2))
 plot(WorldBank$life.expectancy[WorldBank$year == 1960] ~ WorldBank$fertility.rate[WorldBank$year == 1960], pch = '.', ylab = "Life Expectancy", xlab = "Fertility", col = WorldBank$region)
-plot(WorldBank$life.expectancy[WorldBank$year == 2014] ~ WorldBank$fertility.rate[WorldBank$year == 2014], pch = '.', ylab = "Life Expectancy", xlab = "Fertility", col = WorldBank$region)
+plot(WorldBank$life.expectancy[WorldBank$year == 2013] ~ WorldBank$fertility.rate[WorldBank$year == 2013], pch = '.', ylab = "Life Expectancy", xlab = "Fertility", col = WorldBank$region)
 
 # [4 pts]
 # Make a histogram of GDP only for observations where the lending rating is "IDA"
@@ -403,10 +403,10 @@ NumJackpot <- function(k, B){
 par(mfrow=c(2,2))
 
 
-hist(NumJackpot(10000, 5000))
-hist(NumJackpot(50000, 5000))
-hist(NumJackpot(100000, 5000))
-hist(NumJackpot(500000, 5000))
+hist(NumJackpot(100, 50)) #andy
+hist(NumJackpot(500, 50))
+hist(NumJackpot(1000, 50))
+hist(NumJackpot(5000, 50))
 
 #################################################################
 ##### PART VI : string manipulation and regular expressions [20 pts]
