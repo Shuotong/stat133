@@ -23,30 +23,26 @@ ERROR:root:... Expecting: True
 ERROR:root:... But got:   Lengths (85, 83) differ (string compare on first 83)
 ERROR:root:(6 points) Checking R('all.equal(hotelCal.split, sol$hotelCal.split1, check.attributes=F)')[0]
 ERROR:root:... Expecting: True
-ERROR:root:... But got:   target is character, current is NULL
-ERROR:root:(6 points) Checking R('all.equal(hotelCal.split, sol$hotelCal.split2, check.attributes=F)')[0]
-ERROR:root:... Expecting: True
-ERROR:root:... But got:   target is character, current is NULL
+ERROR:root:... But got:   Lengths (85, 83) differ (string compare on first 83)
+INFO:root:(6 points) R('all.equal(hotelCal.split, sol$hotelCal.split2, check.attributes=F)')[0] is True
 ERROR:root:(6 points) Checking R('all.equal(hotelCal.split, sol$hotelCal.split3, check.attributes=F)')[0]
 ERROR:root:... Expecting: True
-ERROR:root:... But got:   target is character, current is NULL
+ERROR:root:... But got:   12 string mismatches
 ERROR:root:(6 points) Checking R('all.equal(hotelCal.split, sol$hotelCal.split4, check.attributes=F)')[0]
 ERROR:root:... Expecting: True
-ERROR:root:... But got:   target is character, current is NULL
+ERROR:root:... But got:   Lengths (85, 83) differ (string compare on first 83)
 ERROR:root:(6 points) Checking R('all.equal(hotelCal.split, sol$hotelCal.split5, check.attributes=F)')[0]
 ERROR:root:... Expecting: True
-ERROR:root:... But got:   target is character, current is NULL
+ERROR:root:... But got:   Lengths (85, 83) differ (string compare on first 83)
 ERROR:root:(6 points) Checking R('all.equal(hotelCal.split, sol$hotelCal.split6, check.attributes=F)')[0]
 ERROR:root:... Expecting: True
-ERROR:root:... But got:   target is character, current is NULL
+ERROR:root:... But got:   13 string mismatches
 ERROR:root:(6 points) Checking R('all.equal(hotelCal.split, sol$hotelCal.split7, check.attributes=F)')[0]
 ERROR:root:... Expecting: True
-ERROR:root:... But got:   target is character, current is NULL
+ERROR:root:... But got:   24 string mismatches
 INFO:root:(2 points) R('all.equal(updateDate(sol$test.date1[[1]], sol$test.date1[[2]]), sol$test.date1.out)')[0] is True
 INFO:root:(2 points) R('all.equal(updateDate(sol$test.date2[[1]], sol$test.date2[[2]]), sol$test.date2.out)')[0] is True
-ERROR:root:(1 points) Checking R('all.equal(updateDate(sol$test.date3[[1]], sol$test.date3[[2]]), sol$test.date3.out)')[0]
-ERROR:root:... Expecting: True
-ERROR:root:... But got:   Lengths (1, 2) differ (string compare on first 1)
+INFO:root:(1 points) R('all.equal(updateDate(sol$test.date3[[1]], sol$test.date3[[2]]), sol$test.date3.out)')[0] is True
 INFO:root:Executed R('abbreviate.output <- abbreviate(sol$abbr.in, 3)')
 ERROR:root:Got exception on main handler
 Traceback (most recent call last):
@@ -131,4 +127,4 @@ Traceback (most recent call last):
 RRuntimeError: Error in all.equal(abbreviate.output, sol$abbr.out) : 
   object 'abbreviate.output' not found
 
-INFO:root:You got a 20 out of 27.
+INFO:root:You got a 27 out of 27.
