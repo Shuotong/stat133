@@ -1,0 +1,98 @@
+INFO:root:Executed R('load(\'../../instructor/assignments/final/final-tests.rda\')')
+INFO:root:(1 points) R('all.equal(x, sol$x, check.attributes=F)')[0] is True
+INFO:root:(1 points) R('all.equal(length(y), 10, check.attributes=F)')[0] is True
+INFO:root:(1 points) R('all.equal(y, sol$y, check.attributes=F)')[0] is True
+INFO:root:(1 points) R('all.equal(z, sol$z, check.attributes=F)')[0] is True
+INFO:root:(1 points) R('all.equal(v, sol$v, check.attributes=F)')[0] is True
+INFO:root:(1 points) R('all.equal(w, sol$w, check.attributes=F)')[0] is True
+INFO:root:(1 points) R('all.equal(m, sol$m, check.attributes=F)')[0] is True
+INFO:root:(1 points) R('all.equal(cw1, sol$cw1, check.attributes=F)')[0] is True
+INFO:root:(1 points) R('all.equal(cw2, sol$cw2, check.attributes=F)')[0] is True
+INFO:root:(1 points) R('all.equal(cw3, sol$cw3, check.attributes=F)')[0] is True
+INFO:root:(1 points) R('all.equal(cw4, sol$cw4, check.attributes=F)')[0] is True
+INFO:root:(1 points) R('all.equal(class(t1), \'table\', check.attributes=F)')[0] is True
+INFO:root:(1 points) R('all.equal(class(t2), \'table\', check.attributes=F)')[0] is True
+INFO:root:(2 points) R('all.equal(abs(bdiff), abs(sol$bdiff), check.attributes=F)')[0] is True
+INFO:root:(1 points) R('length(max.rain)==length(sol$max.rain)')[0] is True
+INFO:root:(1 points) R('all.equal(unlist(max.rain), sol$max.rain, check.attributes=F)')[0] is True
+INFO:root:(3 points) R('all.equal(unlist(max.diff.rain), sol$max.diff.rain, check.attributes=F)')[0] is True
+INFO:root:(2 points) R('all.equal(class(max.diff.rain), \'numeric\', check.attributes=F)')[0] is True
+ERROR:root:(3 points) Checking R('all.equal(unlist(prop.rain), sol$prop.rain, check.attributes=F)')[0]
+ERROR:root:... Expecting: True
+ERROR:root:... But got:   Mean relative difference: 0.9998634
+INFO:root:(1 points) R('all.equal(class(prop.rain), \'numeric\', check.attributes=F)')[0] is True
+ERROR:root:(1 points) Checking R('sum(prop.rain)<5')[0]
+ERROR:root:... Expecting: True
+ERROR:root:... But got:   False
+INFO:root:Executed R('set.seed(8664422); GenNorm.out1 <- GenNorm(mean=0, sd=1, n=1000, plot.hist=TRUE)')
+INFO:root:(2 points) R('all.equal(length(GenNorm.out1), 1000, check.attributes=F)')[0] is True
+INFO:root:(2 points) R('all.equal(GenNorm.out1, sol$GenNorm.out1, check.attributes=F)')[0] is True
+INFO:root:Executed R('set.seed(33445566); GenNorm.out2 <- GenNorm(mean=3, sd=2, n=1000, plot.hist=FALSE)')
+INFO:root:(1 points) R('all.equal(GenNorm.out2, sol$GenNorm.out2, check.attributes=F)')[0] is True
+INFO:root:(1 points) R('all.equal(c(formals(GenNorm)$mean, formals(GenNorm)$sd, formals(GenNorm)$n, formals(GenNorm)$plot.hist), c(0, 1, 1000, TRUE), check.attributes=F)')[0] is True
+INFO:root:Executed R('svar.out1 <- standardizeVar(sol$m.test, cols=TRUE)')
+INFO:root:(3 points) R('all.equal(dim(svar.out1), dim(sol$svar.out1), check.attributes=F)')[0] is True
+INFO:root:(2 points) R('all.equal(svar.out1, sol$svar.out1, check.attributes=F)')[0] is True
+INFO:root:Executed R('svar.out2 <- standardizeVar(sol$m.test, cols=FALSE)')
+ERROR:root:(1 points) Checking R('all.equal(svar.out2, sol$svar.out2, check.attributes=F)')[0]
+ERROR:root:... Expecting: True
+ERROR:root:... But got:   Mean relative difference: 1.369276
+INFO:root:Executed R('set.seed(8664422); pdiff.out <- PermDiff(cases=sol$cases, controls=sol$controls, k=sol$n.it)')
+INFO:root:(4 points) R('all.equal(length(pdiff.out), sol$n.it, check.attributes=F)')[0] is True
+ERROR:root:(4 points) Checking R('abs(mean(pdiff.out)) < 0.5)')[0]
+ERROR:root:... Expecting: True
+ERROR:root:... But got:   Traceback error
+ERROR:root:Got exception:
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/gradebook/score.py", line 180, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2-2.5.6-py2.7-macosx-10.10-intel.egg/rpy2/robjects/__init__.py", line 268, in __call__
+    p = rinterface.parse(string)
+ValueError: Error while parsing the string.
+ERROR:root:Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/gradebook/score.py", line 180, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2-2.5.6-py2.7-macosx-10.10-intel.egg/rpy2/robjects/__init__.py", line 268, in __call__
+    p = rinterface.parse(string)
+ValueError: Error while parsing the string.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/gradebook/score.py", line 180, in check
+    result = eval(command, g)
+  File "<string>", line 1, in <module>
+  File "/Library/Python/2.7/site-packages/rpy2-2.5.6-py2.7-macosx-10.10-intel.egg/rpy2/robjects/__init__.py", line 268, in __call__
+    p = rinterface.parse(string)
+ValueError: Error while parsing the string.
+INFO:root:Executed R('set.seed(47)')
+INFO:root:Executed R('njack.output <- NumJackpot(1000, 100)')
+INFO:root:(3 points) R('all.equal(length(njack.output), 100, check.attributes=F)')[0] is True
+ERROR:root:(4 points) Checking R('all.equal(max(max(njack.output), 10), 10, check.attributes=F)')[0]
+ERROR:root:... Expecting: True
+ERROR:root:... But got:   Mean relative difference: 0.9465241
+ERROR:root:(2 points) Checking R('all.equal(text1, sol$text1, check.attributes=F)')[0]
+ERROR:root:... Expecting: True
+ERROR:root:... But got:   target is character, current is numeric
+ERROR:root:(2 points) Checking R('all.equal(text1, sol$text1.alt, check.attributes=F)')[0]
+ERROR:root:... Expecting: True
+ERROR:root:... But got:   1 string mismatch
+ERROR:root:(2 points) Checking R('all.equal(text2, sol$text2, check.attributes=F)')[0]
+ERROR:root:... Expecting: True
+ERROR:root:... But got:   target is character, current is numeric
+ERROR:root:(2 points) Checking R('all.equal(text2, sol$text2.alt, check.attributes=F)')[0]
+ERROR:root:... Expecting: True
+ERROR:root:... But got:   3 string mismatches
+ERROR:root:(3 points) Checking R('all.equal(text3, sol$text3, check.attributes=F)')[0]
+ERROR:root:... Expecting: True
+ERROR:root:... But got:   target is character, current is numeric
+INFO:root:(3 points) R('all.equal(text3, sol$text3.alt, check.attributes=F)')[0] is True
+INFO:root:(2 points) R('all.equal(text4, sol$text4, check.attributes=F)')[0] is True
+ERROR:root:(2 points) Checking R('all.equal(text5, sol$text5, check.attributes=F)')[0]
+ERROR:root:... Expecting: True
+ERROR:root:... But got:   target is character, current is numeric
+INFO:root:(2 points) R('all.equal(text5, sol$text5.alt, check.attributes=F)')[0] is True
+ERROR:root:(2 points) Checking R('all.equal(phrases2, sol$phrases2, check.attributes=F)')[0]
+ERROR:root:... Expecting: True
+ERROR:root:... But got:   target is character, current is NULL
+INFO:root:(2 points) R('all.equal(dna2, sol$dna2, check.attributes=F)')[0] is True
+INFO:root:You got a 76 out of 100.
